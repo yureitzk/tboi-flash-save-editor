@@ -1,0 +1,41 @@
+{
+	"name": "tboi-flash-save-editor",
+	"version": "1.0.1",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"keywords": [
+		"the binding of isaac",
+		"the binding of isaac flash",
+		"tboi",
+		"save editor",
+		"isaac",
+		"cli"
+	],
+	"author": "yureitzk",
+	"bin": "dist/bin/cli.js",
+	"description": "An editor for The Binding of Isaac serial.txt save file",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/yureitzk/tboi-flash-save-editor.git"
+	},
+	"scripts": {
+		"test": "jest",
+		"build": "tsc",
+		"start": "node dist/index.js",
+		"types": "tsc",
+		"types:check": "tsc --noEmit"
+	},
+	"type": "module",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^30.0.0",
+		"jest": "^30.1.1",
+		"prettier": "^3.5.2",
+		"ts-jest": "^29.2.6",
+		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"commander": "^14.0.0",
+		"console-table-without-index": "^0.1.1"
+	}
+}
