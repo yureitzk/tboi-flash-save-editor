@@ -1,6 +1,7 @@
 .editorconfig
 .prettierrc
 tsconfig.json
+jest.config.js
 
 .git/
 .gitignore
@@ -8,3 +9,6 @@ tsconfig.json
 
 node_modules/
 package-lock.json
+
+src/
+test/
