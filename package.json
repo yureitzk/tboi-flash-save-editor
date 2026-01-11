@@ -26,16 +26,20 @@
 		"start": "node dist/index.js",
 		"types": "tsc",
 		"types:check": "tsc --noEmit",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"lint": "eslint ."
 	},
 	"type": "module",
 	"license": "MIT",
 	"devDependencies": {
+		"@eslint/js": "^9.39.2",
 		"@types/jest": "^30.0.0",
+		"eslint": "^9.39.2",
 		"jest": "^30.1.1",
 		"prettier": "^3.5.2",
 		"ts-jest": "^29.2.6",
-		"typescript": "^5.7.2"
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.52.0"
 	},
 	"dependencies": {
 		"commander": "^14.0.0",
