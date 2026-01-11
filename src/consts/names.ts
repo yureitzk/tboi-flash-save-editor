@@ -1,9 +1,9 @@
 import type {
-    Bosses,
-    Collections,
-    Floors,
-    MiniBosses,
-    Secrets,
+	Bosses,
+	Collections,
+	Floors,
+	MiniBosses,
+	Secrets,
 } from '../editor/types.js';
 
 export const itemsNamesArray: Collections[] = [

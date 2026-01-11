@@ -1,6 +1,9 @@
 # The Binding of Isaac Flash Save Editor
 
-An editor for [The Binding of Isaac](https://store.steampowered.com/app/113200/The_Binding_of_Isaac/) (Flash/Vanilla version) `serial.txt` save file. It can be used to unlock items, secrets and change your stats.
+An editor for
+[The Binding of Isaac](https://store.steampowered.com/app/113200/The_Binding_of_Isaac/)
+(Flash/Vanilla version) `serial.txt` save file. It can be used to unlock items,
+secrets and change your stats.
 
 ## Features
 
@@ -8,19 +11,20 @@ An editor for [The Binding of Isaac](https://store.steampowered.com/app/113200/T
 - Provides a structured way to manipulate save data.
 - Has a command-line interface.
 
-**NOTE**: This project is not well-tested. Make sure to back up your game data before using it. Copy both the `serial.txt` and `so.sol` files to ensure you can recover your progress if anything goes wrong. Please contact me if anything goes wrong and I'll try to fix fix the bug that caused it.
+**NOTE**: This project is not well-tested. Make sure to back up your game data
+before using it. Copy both the `serial.txt` and `so.sol` files to ensure you can
+recover your progress if anything goes wrong. Please contact me if anything goes
+wrong and I'll try to fix fix the bug that caused it.
 
 ## Installation
 
 To install the editor as a library, run the following command:
-
 
 ```sh
 npm install tboi-flash-save-editor
 ```
 
 To install as a cli:
-
 
 ```sh
 npm install -g tboi-flash-save-editor
@@ -30,22 +34,33 @@ npm install -g tboi-flash-save-editor
 
 ### 1. Where is `serial.txt`?
 
-The `serial.txt` file is typically found in the game's directory, alongside the executable.
+The `serial.txt` file is typically found in the game's directory, alongside the
+executable.
+
+<!-- prettier-ignore-start -->
 
 - **Windows**: `..\Steam\steamapps\common\The Binding Of Isaac\`
 - **Mac**: `~/Library/Application Support/Steam/SteamApps/common/the binding of isaac rebirth/`
 - **Linux**: `~/.steam/steam/steamapps/common//The Binding Of Isaac/`
 
+<!-- prettier-ignore-end -->
+
 ### 2. My progress isn't updating or nothing gets unlocked!
 
-If your save data doesn't seem to update, try deleting your `so.sol` file. This file is deprecated but still used by the game to sync with `serial.txt`.
+If your save data doesn't seem to update, try deleting your `so.sol` file. This
+file is deprecated but still used by the game to sync with `serial.txt`.
+
+<!-- prettier-ignore-start -->
 
 - **Windows**: `%appdata%\Macromedia\Flash Player\#SharedObjects\<some random string>\localhost\`
 - **Mac**: `~/Library/Preferences/Macromedia/Flash Player/#SharedObjects/4UUE5CSF/localhost/`
 - **Linux**: `~/.macromedia/Flash_Player/#SharedObjects/randomstring/localhost/so.sol`
 
-For more information, refer to [this article](https://bindingofisaac.fandom.com/wiki/Save_Data#How_serial.txt_works) on The Binding of Isaac Wiki.
+<!-- prettier-ignore-end -->
 
+For more information, refer to
+[this article](https://bindingofisaac.fandom.com/wiki/Save_Data#How_serial.txt_works)
+on The Binding of Isaac Wiki.
 
 ## Usage
 
@@ -93,7 +108,7 @@ import { SaveEditor } from 'tboi-flash-save-editor';
 const editor = new SaveEditor();
 
 // Sample save string (contains all secrets unlocked)
-const mySaveString = `8368483363880242075421014404153202610417376862552834616636650562633468860349756683014106572909430714310164031636616134270769613568846142376481024374558202460516230842051539696356153569643326066369346703378686313982078436348378013336847702214336760522433686332640368683366830848736388004803532807400313380760021433666032240368683264836848336388084873538807450313280740021138676052143366603224036868326,0,0,0,896,14890,8734,105,565,13954,301,50242,0'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1,0'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1,0'513'693'426'551'375'455'341'410'302'0'0,1'1'1'1'1'1'1'0'0'0,1394,274`
+const mySaveString = `8368483363880242075421014404153202610417376862552834616636650562633468860349756683014106572909430714310164031636616134270769613568846142376481024374558202460516230842051539696356153569643326066369346703378686313982078436348378013336847702214336760522433686332640368683366830848736388004803532807400313380760021433666032240368683264836848336388084873538807450313280740021138676052143366603224036868326,0,0,0,896,14890,8734,105,565,13954,301,50242,0'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1,0'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1'1,0'513'693'426'551'375'455'341'410'302'0'0,1'1'1'1'1'1'1'0'0'0,1394,274`;
 
 editor.parse(mySaveString);
 console.log(editor.getMomKillsCount()); // Output: 896
@@ -134,7 +149,7 @@ editor.unlockSecret('D20');
 editor.lockSecret('D20');
 ```
 
-Get a string for serial.txt 
+Get a string for serial.txt
 
 ```js
 const newSaveString = editor.toString();
@@ -151,10 +166,14 @@ console.log(newSaveString);
 
 ## Resources
 
-This project was inspired by [Himsl Games's video](https://www.youtube.com/watch?v=0aMURcjvbEI), titled "Save Files Explained in The Binding of Isaac!" - a fantastic explanation of the game's save system.
+This project was inspired by
+[Himsl Games's video](https://www.youtube.com/watch?v=0aMURcjvbEI), titled "Save
+Files Explained in The Binding of Isaac!" - a fantastic explanation of the
+game's save system.
 
-
-Additionally, a big thank you to [The Binding of Isaac Wiki](https://bindingofisaac.fandom.com/) for its detailed resources.
+Additionally, a big thank you to
+[The Binding of Isaac Wiki](https://bindingofisaac.fandom.com/) for its detailed
+resources.
 
 ## Contributing
 
