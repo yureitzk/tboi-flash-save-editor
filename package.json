@@ -25,7 +25,8 @@
 		"build": "tsc",
 		"start": "node dist/index.js",
 		"types": "tsc",
-		"types:check": "tsc --noEmit"
+		"types:check": "tsc --noEmit",
+		"format": "prettier --write ."
 	},
 	"type": "module",
 	"license": "MIT",
