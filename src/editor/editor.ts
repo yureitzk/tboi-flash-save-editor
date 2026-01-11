@@ -107,7 +107,7 @@ export class SaveEditor {
 	}
 
 	#getSettingsValue(settings: string): SettingsType {
-		if (settings !== 'true' || '0') {
+		if (settings !== 'true' && settings !== '0') {
 			return '0';
 		}
 		return settings;

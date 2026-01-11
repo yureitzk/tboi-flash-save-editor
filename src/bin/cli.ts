@@ -224,10 +224,13 @@ function handleCountOptions(
 
 		try {
 			itemDefinition.setter(numericValue);
-		} catch (error: any) {
+		} catch (err: unknown) {
+			const errorMessage =
+				err instanceof Error ? err.message : 'Unknown error occurred';
+
 			collectedWarnings.push({
 				option,
-				message: `Error setting "${itemDefinition.name}" for --${optionName}: ${error.message}`,
+				message: `Error setting "${itemDefinition.name}" for --${optionName}: ${errorMessage}`,
 			});
 		}
 	}

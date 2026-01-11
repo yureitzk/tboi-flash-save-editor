@@ -157,7 +157,7 @@ export function decrypt(
 			const encryptedValue = parseInt(checker1[f1], 10);
 
 			if (!isNaN(encryptedValue)) {
-				let originalCheckerValue = checker[f1];
+				const originalCheckerValue = checker[f1];
 				let encryptedCheckerValue = originalCheckerValue + (e % 4) + 1;
 				if (encryptedCheckerValue > 9) {
 					encryptedCheckerValue -= 9;
@@ -209,9 +209,10 @@ function parseStringSubArray(
 	checkArray: string[],
 ): string[] {
 	if (subArrayString !== '' && subArrayString !== '0') {
-		const firstPart = subArrayString.split("'");
+		// eslint-disable-next-line prefer-const
+		let firstPart = subArrayString.split("'");
 		firstPart.shift();
-		let array = firstPart ? firstPart : [];
+		const array = firstPart ? firstPart : [];
 
 		while (array.length < checkArray.length) {
 			array.push('0');
